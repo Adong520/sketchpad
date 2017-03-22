@@ -11,4 +11,14 @@
 	width:100px;
 	height: 30px;
 	border-radius:5px;
+	background-color:rgb(195,194,208);
+	display: inline;
+}
+
+#clear{
+	margin-left:320px;
+}
+
+#input {
+	display:inline;
 }

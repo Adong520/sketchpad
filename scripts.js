@@ -24,35 +24,7 @@ function drawGrid(gridNumber){
 				//font-size:"2px"
 			}).appendTo("#container");	
 
-			//$('.grid').css("width","30px");
-			//$('.grid').css("height","30px");
-			//$('.grid').css("border","1px solid black");
-			//$('.grid').css("float","left");
-			//$('.grid').css("dispaly","inline");
-			//$('.grid').css("font-size","10px");
-
-			//$('#'+divId).css("width","30px");
-			//$('#'+divId).css("height","30px");
-			//$('#'+divId).css("border","1px solid black");
-
-
-			//$('#'+divId).css("display","inline-block");
-			//$('#'+divId).css("float","left");
-			//$('#'+divId).css("font-size","10px");
-
-
-			/*if (j===1) {
-			// grid goes to newline
-			console.log(divId+ 'and'+j);
-
-			$('#'+divId).css("background-color","red");
-			$('#'+divId).css("clear","left");
-			} else {
-				$('#'+divId).css("float","left");
-			}//if
-			*/
-
-
+			
 			}; // for j
 
 		    }; // for i
@@ -100,12 +72,13 @@ function clearSketchPad()
 	$('.grid').css("background-color","#e4e4e4");
 }; // clearSketchPad()
 
-function getGridNum() {
+function reDrawGrid() {
 	var gridNum = document.getElementById('number').value;
-	console.log(gridNum);
-	count = gridNum;
+	if (isInt(gridNum) !== 0){
+		count = gridNum;
+
 	$('.grid').remove();
-	drawGrid(count);
+	drawGrid(count);}
 
 }// redraw grid
 
@@ -113,7 +86,6 @@ function getGridNum() {
 function getRandomColor() {
     return Math.ceil(Math.random()*255);
         
-    
 }// getRandowmColor
 
 /*function getRandomColor2 (oldColor) {
@@ -135,3 +107,22 @@ function getRandomColor() {
 	return color;
 
 }	*/
+
+function isInt(x){
+	if (isNaN(x) === false){
+		if (x%1===0){
+
+			return x;
+		}else {
+			alert("please input an integer!");
+			return 0;
+		}
+
+
+	} else {
+		alert("Please input a number!");
+		return 0;
+	}
+
+
+}

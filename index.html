@@ -10,10 +10,9 @@
 
 <button id="clear" class = "button" onclick="clearSketchPad()">Clear All</button>
 
-<p>Please input a number for the grid</p>
-<input id="number">
-<button id="submit" class="button" onclick="getGridNum()">OK</button>
-
+<p id="input">Please input a number for the grid (default 16)</p>
+<input type="text" id="number">
+<button id="submit" class="button" onclick="reDrawGrid()">OK</button>
 
 <div id='container'></div>
 
