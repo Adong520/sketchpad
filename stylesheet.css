@@ -1,0 +1,14 @@
+#container {
+	width:520px;
+	height: 520px;
+	border:1px red solid;
+	background-color: #e4e4e4;
+	margin:auto;
+	margin-top: 50px;
+}
+
+.button {
+	width:100px;
+	height: 30px;
+	border-radius:5px;
+}
